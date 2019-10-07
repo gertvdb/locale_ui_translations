@@ -55,7 +55,7 @@ class RouteSubscriber extends RouteSubscriberBase {
     ];
 
     foreach ($routePaths as $routePath => $permission) {
-        $this->alterPermission($collection, $routePath, $permission);
+      $this->alterPermission($collection, $routePath, $permission);
     }
   }
 
