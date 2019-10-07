@@ -25,12 +25,12 @@ class RouteSubscriber extends RouteSubscriberBase {
    * Alter the permissions.
    *
    * @param \Symfony\Component\Routing\RouteCollection $collection
-   * @param $route_path
+   * @param $routePath
    * @param $permission
    */
-  private function alterPermission(RouteCollection $collection, $route_path, $permission) {
-    if ($collection->get($route_path)) {
-      $route = $collection->get($route_path);
+  private function alterPermission(RouteCollection $collection, $routePath, $permission) {
+    if ($collection->get($routePath)) {
+      $route = $collection->get($routePath);
       $route->setRequirement('_permission', $permission);
     }
   }
@@ -41,7 +41,7 @@ class RouteSubscriber extends RouteSubscriberBase {
   protected function alterRoutes(RouteCollection $collection) {
 
     // Better permissions for permission management page.
-    $route_paths = [
+    $routePaths = [
       'locale.settings' => 'translate interface settings',
       'locale.check_translation' => 'translate interface check translation',
       'locale.translate_page' => 'translate interface page',
@@ -51,8 +51,8 @@ class RouteSubscriber extends RouteSubscriberBase {
       'potx.extract_translation' => 'translate interface extract'
     ];
 
-    foreach ($route_paths as $route_path => $permission) {
-        $this->alterPermission($collection, $route_path, $permission);
+    foreach ($routePaths as $routePath => $permission) {
+        $this->alterPermission($collection, $routePath, $permission);
     }
   }
 
