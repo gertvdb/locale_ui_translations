@@ -1,6 +1,6 @@
 {
-  "name": "gertvdb/coordinates",
-  "description": "Provide a standard way to store coordinates.",
+  "name": "gertvdb/locale_ui_translations",
+  "description": "Extends Drupal locale to provide more fine grained permissions for UI translations.",
   "type": "drupal-module",
   "license": "GPL-2.0+",
   "require-dev": {

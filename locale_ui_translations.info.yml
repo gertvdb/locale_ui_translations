@@ -1,4 +1,4 @@
 name: Interface Translation (Overwrite)
 type: module
-description: All functionality related to ui translations
+description: Extends Drupal locale to provide more fine grained permissions for UI translations
 core: 8.x
