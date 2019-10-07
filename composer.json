@@ -1,0 +1,53 @@
+{
+  "name": "gertvdb/coordinates",
+  "description": "Provide a standard way to store coordinates.",
+  "type": "drupal-module",
+  "license": "GPL-2.0+",
+  "require-dev": {
+    "drupal/coder": "^8.3.1",
+    "drupal/core": "^8.7",
+    "jakub-onderka/php-console-highlighter": "^0.4.0",
+    "jakub-onderka/php-parallel-lint": "^1.0",
+    "phpmd/phpmd": "^2.6",
+    "phpunit/phpunit": "^6.5",
+    "squizlabs/php_codesniffer": "^3.4",
+    "php-coveralls/php-coveralls": "^2.1",
+    "phpunit/phpcov": "^4.0"
+  },
+  "minimum-stability": "alpha",
+  "scripts": {
+    "test": [
+      "@phplint",
+      "@phpunit",
+      "@phpcs",
+      "@phpmd"
+    ],
+    "phplint": "vendor/bin/parallel-lint --exclude vendor/ --exclude .idea/ -e php,module,inc,install,profile,theme .",
+    "phpunit": "vendor/bin/phpunit --configuration=phpunit.xml",
+    "phpcs": "vendor/bin/phpcs --ignore=vendor/,.idea/ --standard=vendor/drupal/coder/coder_sniffer/Drupal/ruleset.xml --extensions=php,module,inc,install,profile,theme --report=full --warning-severity=0 .",
+    "phpcbf": "vendor/bin/phpcbf --ignore=vendor/,.idea/ --standard=vendor/drupal/coder/coder_sniffer/Drupal/ruleset.xml --extensions=php,module,inc,install,profile,theme .",
+    "phpmd": "vendor/bin/phpmd --exclude vendor/,.idea/ --suffixes php,module,inc,install,profile,theme . text phpmd.xml"
+  },
+  "autoload": {
+    "psr-4": {
+      "Drupal\\coordinates\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Drupal\\Tests\\locale_ui_translations\\": "tests/src/",
+      "Drupal\\Tests\\": "vendor/drupal/core/tests/Drupal/Tests"
+    }
+  },
+  "repositories": {
+    "drupal": {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
+    }
+  },
+  "config": {
+    "platform": {
+      "php": "7.0.8"
+    }
+  }
+}

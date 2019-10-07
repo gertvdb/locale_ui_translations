@@ -1,0 +1,8 @@
+# Subscription type menu items definition
+
+system.locale_ui_translations:
+  title: 'Translate Interface'
+  description: 'Translate the interface strings of the website.'
+  route_name: locale.translate_page
+  parent: 'system.admin'
+  weight: 140

@@ -1,0 +1,6 @@
+services:
+
+  ui_translations.route_subscriber:
+    class: Drupal\locale_ui_translations\Routing\RouteSubscriber
+    tags:
+      - { name: 'event_subscriber' }

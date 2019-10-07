@@ -1,0 +1,21 @@
+translate interface settings:
+  title: 'translate interface settings'
+  description: 'translate interface settings'
+translate interface check translation:
+  title: 'translate interface check translation'
+  description: 'translate interface check translation'
+translate interface page:
+  title: 'translate interface page'
+  description: 'translate interface page'
+translate interface import:
+  title: 'translate interface import'
+  description: 'translate interface import'
+translate interface export:
+  title: 'translate interface export'
+  description: 'translate interface export'
+translate interface status:
+  title: 'translate interface status'
+  description: 'translate interface status'
+translate interface extract:
+  title: 'translate interface extract'
+  description: 'translate interface extract'
