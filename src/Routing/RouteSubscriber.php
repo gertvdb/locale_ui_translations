@@ -25,8 +25,11 @@ class RouteSubscriber extends RouteSubscriberBase {
    * Alter the permissions.
    *
    * @param \Symfony\Component\Routing\RouteCollection $collection
-   * @param $routePath
-   * @param $permission
+   *   The full route collection.
+   * @param string $routePath
+   *   The path to evaluate.
+   * @param string $permission
+   *   The new permission to use.
    */
   private function alterPermission(RouteCollection $collection, $routePath, $permission) {
     if ($collection->get($routePath)) {
